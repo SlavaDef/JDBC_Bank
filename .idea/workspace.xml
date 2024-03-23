@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 5">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/ClientCrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/Tables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/MainDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/storage/DatabaseInitService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/storage/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Clients.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/ExchangeRates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/ExchangeRates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Scores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Scores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Transactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Transactions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbBank.properties" beforeDir="false" />
-    </list>
+    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 6" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,7 +124,7 @@
       <workItem from="1710688596338" duration="41000" />
       <workItem from="1710688713248" duration="7550000" />
       <workItem from="1711136956906" duration="5416000" />
-      <workItem from="1711208800204" duration="14217000" />
+      <workItem from="1711208800204" duration="14558000" />
     </task>
     <task id="LOCAL-00001" summary="comit 5">
       <option name="closed" value="true" />
@@ -154,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710098915532</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="comit 6">
+      <option name="closed" value="true" />
+      <created>1711226473393</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711226473393</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +154,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="comit 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="comit 5" />
+    <MESSAGE value="comit 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="comit 6" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

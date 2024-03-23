@@ -9,7 +9,7 @@ import org.hibernate.Transaction;
 
 import static com.progItHomework.Util.*;
 
-public class ScoreDaoImp implements ScoreDao{
+public class ScoreDaoImp implements ScoreDao {
 
     @Override
     public Score addScore(Score score) {
@@ -31,8 +31,8 @@ public class ScoreDaoImp implements ScoreDao{
     @Override
     public void createSomeScores(int count) {
         for (int i = 0; i < count; i++) {
-            addScore(new Score(getRandomDouble(),getRandomDouble(),getRandomDouble(),
-                    new ExchangeRates(37.00,38.5,40.2,41.00)));
+            addScore(new Score(getRandomDouble(), getRandomDouble(), getRandomDouble(),
+                    new ExchangeRates(37.00, 38.5, 40.2, 41.00)));
         }
     }
 
@@ -45,22 +45,25 @@ public class ScoreDaoImp implements ScoreDao{
             return score;
         }
     }
+
     @Override
-   public Score updateScoreInUsd(Score score, Double usd){
+    public Score updateScoreInUsd(Score score, Double usd) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction tx1 = session.beginTransaction();
-            score.setUsd(usd);
+            Double money = score.getUsd();
+            score.setUsd(money + usd);
             session.merge(score);
             tx1.commit();
             return score;
         }
-   }
+    }
 
     @Override
     public Score updateScoreInEuro(Score score, Double eur) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction tx1 = session.beginTransaction();
-            score.setEur(eur);
+            Double myMoney = score.getEur();
+            score.setEur(myMoney + eur);
             session.merge(score);
             tx1.commit();
             return score;
@@ -71,7 +74,8 @@ public class ScoreDaoImp implements ScoreDao{
     public Score updateScoreInUan(Score score, Double uan) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction tx1 = session.beginTransaction();
-            score.setUan(uan);
+            Double myMoney = score.getUan();
+            score.setUan(myMoney + uan);
             session.merge(score);
             tx1.commit();
             return score;
@@ -83,12 +87,12 @@ public class ScoreDaoImp implements ScoreDao{
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction tx1 = session.beginTransaction();
             // score.getExchangeRates().setBuy_USD(37.00);
-          //  score.getExchangeRates().setSail_USD(38.00);
-          //  score.getExchangeRates().setBuy_EUR(40.00);
-          //  score.getExchangeRates().setSail_EUR(41.00);
+            //  score.getExchangeRates().setSail_USD(38.00);
+            //  score.getExchangeRates().setBuy_EUR(40.00);
+            //  score.getExchangeRates().setSail_EUR(41.00);
             double usdUan = score.getExchangeRates().getBuy_USD();
             double eurUan = score.getExchangeRates().getBuy_EUR();
-            score.getExchangeRates().setResult((score.getUsd()*usdUan) + (score.getEur()*eurUan)+score.getUan());
+            score.getExchangeRates().setResult((score.getUsd() * usdUan) + (score.getEur() * eurUan) + score.getUan());
             session.merge(score);
             tx1.commit();
             return score;

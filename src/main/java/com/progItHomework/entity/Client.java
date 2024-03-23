@@ -1,15 +1,16 @@
 package com.progItHomework.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "clients")
+@Table(name = "client")
 public class Client {
 
     @Id
@@ -28,12 +29,28 @@ public class Client {
 
     @Column(name = "client_email", length = 50, nullable = false)
     private String email;
-
-    @Column(name = "client_passport", length = 10, nullable = false)
+    //@Lob
+    @Column(length = 25, nullable = false)
     private String passport;
 
     @OneToMany(mappedBy = "client", cascade ={CascadeType.MERGE,CascadeType.REMOVE}, fetch = FetchType.EAGER)
     private List<Score> scoreList = new ArrayList<>();
 
 
+    public Client(String clientFullName, String phone, String address, String email, String passport) {
+        this.clientFullName = clientFullName;
+        this.phone = phone;
+        this.address = address;
+        this.email = email;
+        this.passport = passport;
+    }
+
+    public Client(String clientFullName, String phone, String address, String email, String passport, List<Score> scoreList) {
+        this.clientFullName = clientFullName;
+        this.phone = phone;
+        this.address = address;
+        this.email = email;
+        this.passport = passport;
+        this.scoreList = scoreList;
+    }
 }

@@ -3,7 +3,7 @@ package com.progItHomework.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 
 @NoArgsConstructor

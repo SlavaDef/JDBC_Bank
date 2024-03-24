@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 8" />
+    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 9">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/ExchangeRates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/ExchangeRates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/T_Z" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/T_Z" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,34 +40,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;Application.Aplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ScoreDaoImp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/JDBS_Bank&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Application.Aplication.executor": "Run",
+    "Application.App.executor": "Debug",
+    "Application.Main.executor": "Run",
+    "Application.ScoreDaoImp.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Admin/Desktop/JDBS_Bank",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\JDBS_Bank\src\main\resources" />
@@ -67,11 +75,11 @@
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.progItHomework.App" />
+      <option name="MAIN_CLASS_NAME" value="com.progItHomework.runApplication.App" />
       <module name="JDBS_Bank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.progItHomework.*" />
+          <option name="PATTERN" value="com.progItHomework.runApplication.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,11 +88,11 @@
       </method>
     </configuration>
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.progItHomework.Application" />
+      <option name="MAIN_CLASS_NAME" value="com.progItHomework.runApplication.Application" />
       <module name="JDBS_Bank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.progItHomework.*" />
+          <option name="PATTERN" value="com.progItHomework.runApplication.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,7 +147,7 @@
       <workItem from="1710688713248" duration="7550000" />
       <workItem from="1711136956906" duration="5416000" />
       <workItem from="1711208800204" duration="21436000" />
-      <workItem from="1711279345750" duration="1899000" />
+      <workItem from="1711279345750" duration="5943000" />
     </task>
     <task id="LOCAL-00001" summary="comit 5">
       <option name="closed" value="true" />
@@ -173,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711281235384</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="comit 9">
+      <option name="closed" value="true" />
+      <created>1711281391669</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711281391669</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +204,19 @@
     <MESSAGE value="comit 6" />
     <MESSAGE value="comit 7" />
     <MESSAGE value="comit 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="comit 8" />
+    <MESSAGE value="comit 9" />
+    <option name="LAST_COMMIT_MESSAGE" value="comit 9" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

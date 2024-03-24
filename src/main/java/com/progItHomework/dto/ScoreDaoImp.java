@@ -6,6 +6,8 @@ import com.progItHomework.storage.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 import static com.progItHomework.utils.Util.*;
 import static org.hibernate.resource.transaction.spi.TransactionStatus.ACTIVE;
 import static org.hibernate.resource.transaction.spi.TransactionStatus.MARKED_ROLLBACK;
@@ -103,21 +105,25 @@ public class ScoreDaoImp implements ScoreDao {
     }
 
     @Override
-    public Score allYourManyInUan(Score score) {
+    public double allYourMoneyInUan(List<Score> scorelist) {
+        double res=0.01;
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
+
         try (session) {
-            double usdUan = score.getExchangeRates().getBuy_USD();
-            double eurUan = score.getExchangeRates().getBuy_EUR();
-            score.getExchangeRates().setResult((score.getUsd() * usdUan) + (score.getEur() * eurUan) + score.getUan());
-            session.merge(score);
-            transaction.commit();
-            session.flush();
+            for(Score score: scorelist) {
+                double usdUan = score.getExchangeRates().getBuy_USD();
+                double eurUan = score.getExchangeRates().getBuy_EUR();
+                score.getExchangeRates().setResult((score.getUsd() * usdUan) + (score.getEur() * eurUan) + score.getUan());
+                res += score.getExchangeRates().getResult()-0.01;
+                session.merge(score);
+                transaction.commit();
+            }
         } catch (Exception e) {
             if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
                 transaction.rollback();
             }
         }
-        return score;
+        return res;
     }
 }

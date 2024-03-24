@@ -32,7 +32,7 @@ public class ExchangeRates { // курси валют
                 ", sail_USD=" + sail_USD +
                 ", buy_EUR=" + buy_EUR +
                 ", sail_EUR=" + sail_EUR +
-                ", result=" + result +"UAN"+
+              //  ", result=" + result +"UAN"+
                 '}';
     }
 }

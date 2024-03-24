@@ -3,6 +3,8 @@ package com.progItHomework.dto;
 import com.progItHomework.entity.Client;
 import com.progItHomework.entity.Score;
 
+import java.util.List;
+
 public interface ScoreDao {
 
     Score addScore(Score score);
@@ -17,5 +19,7 @@ public interface ScoreDao {
     Score updateScoreInEuro(Score score, Double eur);
     Score updateScoreInUan(Score score, Double uan);
 
-    Score allYourManyInUan(Score score);
+    //Score allYourManyInUan(Score score);
+
+    double allYourMoneyInUan(List<Score> scorelist);
 }

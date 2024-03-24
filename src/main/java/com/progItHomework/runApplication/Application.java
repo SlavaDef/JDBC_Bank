@@ -16,6 +16,7 @@ public class Application {
     public static void runApplication() {
 
         Long userId = 1L;
+        String passport ="";
         try (Scanner sc = new Scanner(System.in)) {
 
             ClientDao clientDao = new ClientDaoImpl();
@@ -38,19 +39,37 @@ public class Application {
                 switch (s) {
                     case "1":
                         System.out.print("Enter your passport ");
-                        String passport = sc.nextLine();
+                         passport = sc.nextLine();
                         userId = clientDao.getClientByPassport(passport).getId();
                         System.out.println(clientDao.getClientByPassport(passport).getScoreList());
                         break;
                     case "2":
                         System.out.println("Your count is " +
-                                scoreDao.allYourMoneyInUan(scoreDao.getById(userId).getClient().getScoreList())+ "_uans");
+                                scoreDao.allYourMoneyInUan(scoreDao.getById(userId).getClient().getScoreList()) + "_uans");
                         break;
                     case "3":
-                        System.out.print("Enter how many dollars you want to deposit? ");
-                        String usd = sc.nextLine();
-                        double usD = Double.parseDouble(usd);
-                        scoreDao.updateScoreInUsd(scoreDao.getById(userId), usD);
+                        System.out.print("1 - refill, 2 - transit ");
+                        String answer = sc.nextLine();
+                        int ans = Integer.parseInt(answer);
+                        if (ans == 1) {
+                            System.out.print("Enter how many dollars you want to deposit? ");
+                            String usd = sc.nextLine();
+                            double usD = Double.parseDouble(usd);
+                            scoreDao.updateScoreInUsd(scoreDao.getById(userId), usD);
+                        }
+                        if (ans == 2) {
+                           // System.out.print("Enter first count /  First = 0");
+                         //   String answer2 = sc.nextLine();
+                         //   Long ans2 = Long.parseLong(answer2);
+                         //   System.out.print("Enter second count / Second = 1");
+                         //   String answer3 = sc.nextLine();
+                         //   Long ans3 = Long.parseLong(answer3);
+                            System.out.print("How many ");
+                            String usd = sc.nextLine();
+                            double usD = Double.parseDouble(usd);
+                            scoreDao.updateAnotherScoreInUsd(clientDao.getClientByPassport(passport).getScoreList().get(0),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(1), usD);
+                        }
                         break;
                     case "4":
                         System.out.print("Enter how many euros you want to deposit ");

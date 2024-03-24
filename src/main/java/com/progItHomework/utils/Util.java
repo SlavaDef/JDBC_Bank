@@ -46,4 +46,6 @@ public class Util {
         cl.addScoreToClient(sc.getById(4L), cl.getById(4L));
         cl.addScoreToClient(sc.getById(5L), cl.getById(5L));
     }
+
+
 }

@@ -14,7 +14,7 @@ import static com.progItHomework.utils.Util.*;
 public class ClientDaoImpl implements ClientDao {
 
     @Override
-    public Client addClient(Client client) {
+    public Client addClient(Client client) { // add new client
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             session.persist(client);
@@ -50,7 +50,7 @@ public class ClientDaoImpl implements ClientDao {
 
 
     @Override
-    public void createSomeClients(int count) {
+    public void createSomeClients(int count) { // create random clients
         for (int i = 0; i < count; i++) {
             addClient(new Client(getRandomFullName(), getRandomPhone(), getRandomAddress(),
                     getRandomEmails(), "HH:00222" + i));
@@ -58,7 +58,7 @@ public class ClientDaoImpl implements ClientDao {
     }
 
     @Override
-    public void addScoreToClient(Score score, Client client) {
+    public void addScoreToClient(Score score, Client client) { // set Score in to Client
 
         score.setClient(client);
         client.getScoreList().add(score);
@@ -78,6 +78,4 @@ public class ClientDaoImpl implements ClientDao {
         }
 
     }
-
-
 }

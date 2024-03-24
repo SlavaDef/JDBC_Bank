@@ -32,17 +32,7 @@ public class ScoreDaoImp implements ScoreDao {
     }
 
     @Override
-    public Score getByClientPassport(String passport) {
-        ClientDao dao = new ClientDaoImpl();
-
-        Long id = 1L;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            return session.get(Score.class, id);
-        }
-    }
-
-    @Override
-    public void createSomeScores(int count) {
+    public void createSomeScores(int count) { // create random Scores
         for (int i = 0; i < count; i++) {
             addScore(new Score(getRandomDouble(), getRandomDouble(), getRandomDouble(),
                     new ExchangeRates(37.00, 38.5, 40.2, 41.00)));
@@ -111,7 +101,7 @@ public class ScoreDaoImp implements ScoreDao {
     }
 
     @Override
-    public double allYourMoneyInUan(List<Score> scorelist) {
+    public double allClientMoneyInUan(List<Score> scorelist) {
         double res = 0.01;
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();

@@ -45,7 +45,7 @@ public class Application {
                         break;
                     case "2":
                         System.out.println("Your count is " +
-                                scoreDao.allYourMoneyInUan(
+                                scoreDao.allClientMoneyInUan(
                                         scoreDao.getById(userId).getClient().getScoreList()) + "_uans");
                         break;
                     case "3":
@@ -58,7 +58,7 @@ public class Application {
                             double usD = Double.parseDouble(usd);
                             scoreDao.updateScoreInUsdPlus(scoreDao.getById(userId), usD);
                         }
-                        if (ans == 2) {
+                        if (ans == 2) {  // TO-DO
                             System.out.print("How many? ");
                             String usd = sc.nextLine();
                             double usD = Double.parseDouble(usd);

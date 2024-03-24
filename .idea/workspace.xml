@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 12">
+    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 13">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ClientDaoImpTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ClientDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ClientDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +47,12 @@
     "Application.App.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.ScoreDaoImp.executor": "Run",
+    "JUnit.ClientDaoImpTest.ifAddScoreToClientWorks.executor": "Run",
+    "JUnit.ClientDaoImpTest.ifClientGetingById.executor": "Run",
+    "JUnit.ClientDaoImpTest.ifClientIsAdd.executor": "Run",
+    "JUnit.ClientDaoImpTest.ifClientIsUpdated.executor": "Run",
+    "JUnit.ClientDaoImpTest.ifClientReturnsByPassport.executor": "Run",
+    "JUnit.ClientDaoImpTest.ifCreateSomeClientsWork.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -70,50 +79,63 @@
       <recent name="C:\Users\Admin\Desktop\JDBS_Bank\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.progItHomework.runApplication.App" />
+  <component name="RunManager" selected="JUnit.ClientDaoImpTest">
+    <configuration name="ClientDaoImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JDBS_Bank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.progItHomework.runApplication.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ClientDaoImpTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.progItHomework.runApplication.Application" />
+    <configuration name="ClientDaoImpTest.ifAddScoreToClientWorks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JDBS_Bank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.progItHomework.runApplication.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ClientDaoImpTest" />
+      <option name="METHOD_NAME" value="ifAddScoreToClientWorks" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreDaoImp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.progItHomework.dto.ScoreDaoImp" />
+    <configuration name="ClientDaoImpTest.ifClientIsUpdated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JDBS_Bank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.progItHomework.dto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ClientDaoImpTest" />
+      <option name="METHOD_NAME" value="ifClientIsUpdated" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientDaoImpTest.ifClientReturnsByPassport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBS_Bank" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ClientDaoImpTest" />
+      <option name="METHOD_NAME" value="ifClientReturnsByPassport" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientDaoImpTest.ifCreateSomeClientsWork" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBS_Bank" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ClientDaoImpTest" />
+      <option name="METHOD_NAME" value="ifCreateSomeClientsWork" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.ScoreDaoImp" />
+        <item itemvalue="JUnit.ClientDaoImpTest" />
+        <item itemvalue="JUnit.ClientDaoImpTest.ifAddScoreToClientWorks" />
+        <item itemvalue="JUnit.ClientDaoImpTest.ifClientReturnsByPassport" />
+        <item itemvalue="JUnit.ClientDaoImpTest.ifClientIsUpdated" />
+        <item itemvalue="JUnit.ClientDaoImpTest.ifCreateSomeClientsWork" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +166,7 @@
       <workItem from="1710688713248" duration="7550000" />
       <workItem from="1711136956906" duration="5416000" />
       <workItem from="1711208800204" duration="21436000" />
-      <workItem from="1711279345750" duration="19538000" />
+      <workItem from="1711279345750" duration="24575000" />
     </task>
     <task id="LOCAL-00001" summary="comit 5">
       <option name="closed" value="true" />
@@ -210,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711306361177</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="comit 13">
+      <option name="closed" value="true" />
+      <created>1711310047232</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711310047232</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +259,8 @@
     <MESSAGE value="comit 10" />
     <MESSAGE value="comit 11" />
     <MESSAGE value="comit 12" />
-    <option name="LAST_COMMIT_MESSAGE" value="comit 12" />
+    <MESSAGE value="comit 13" />
+    <option name="LAST_COMMIT_MESSAGE" value="comit 13" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

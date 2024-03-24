@@ -21,9 +21,7 @@ public interface ScoreDao {
 
     void updateScoreInUan(Score score, Double uan);
 
-    double allYourMoneyInUan(List<Score> scorelist);
-
-    Score getByClientPassport(String passport);
+    double allClientMoneyInUan(List<Score> scorelist);
 
     void updateScoreInUsdMinus(Score score, Double usd);
 }

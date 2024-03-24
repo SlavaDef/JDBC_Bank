@@ -32,6 +32,16 @@ public class ScoreDaoImp implements ScoreDao {
     }
 
     @Override
+    public Score getByClientPassport(String passport) {
+        ClientDao dao = new ClientDaoImpl();
+
+        Long id = 1L;
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            return session.get(Score.class, id);
+        }
+    }
+
+    @Override
     public void createSomeScores(int count) {
         for (int i = 0; i < count; i++) {
             addScore(new Score(getRandomDouble(), getRandomDouble(), getRandomDouble(),
@@ -50,7 +60,7 @@ public class ScoreDaoImp implements ScoreDao {
     }
 
     @Override
-    public Score updateScoreInUsd(Score score, Double usd) {
+    public void updateScoreInUsd(Score score, Double usd) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         try (session) {
@@ -64,11 +74,10 @@ public class ScoreDaoImp implements ScoreDao {
                 transaction.rollback();
             }
         }
-        return score;
     }
 
     @Override
-    public Score updateScoreInEuro(Score score, Double eur) {
+    public void updateScoreInEuro(Score score, Double eur) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         try (session) {
@@ -82,11 +91,10 @@ public class ScoreDaoImp implements ScoreDao {
                 transaction.rollback();
             }
         }
-        return score;
     }
 
     @Override
-    public Score updateScoreInUan(Score score, Double uan) {
+    public void updateScoreInUan(Score score, Double uan) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         try (session) {
@@ -100,22 +108,20 @@ public class ScoreDaoImp implements ScoreDao {
                 transaction.rollback();
             }
         }
-        return score;
-
     }
 
     @Override
     public double allYourMoneyInUan(List<Score> scorelist) {
-        double res=0.01;
+        double res = 0.01;
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
 
         try (session) {
-            for(Score score: scorelist) {
+            for (Score score : scorelist) {
                 double usdUan = score.getExchangeRates().getBuy_USD();
                 double eurUan = score.getExchangeRates().getBuy_EUR();
                 score.getExchangeRates().setResult((score.getUsd() * usdUan) + (score.getEur() * eurUan) + score.getUan());
-                res += score.getExchangeRates().getResult()-0.01;
+                res += score.getExchangeRates().getResult() - 0.01;
                 session.merge(score);
                 transaction.commit();
             }

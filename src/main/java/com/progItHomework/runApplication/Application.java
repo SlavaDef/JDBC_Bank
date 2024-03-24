@@ -37,10 +37,10 @@ public class Application {
                 String s = sc.nextLine();
                 switch (s) {
                     case "1":
-                        System.out.print("Enter your id ");
-                        String id = sc.nextLine();
-                        userId = Long.parseLong(id);
-                        System.out.println(clientDao.getById(userId).getScoreList());
+                        System.out.print("Enter your passport ");
+                        String passport = sc.nextLine();
+                        userId = clientDao.getClientByPassport(passport).getId();
+                        System.out.println(clientDao.getClientByPassport(passport).getScoreList());
                         break;
                     case "2":
                         System.out.println("Your count is " +
@@ -67,11 +67,6 @@ public class Application {
                     case "6":
                         Score score = new Score(0.01, 0.01, 0.01,
                                 new ExchangeRates(37.00, 38.5, 40.2, 41.00));
-                        // scoreDao.addScore(score);
-                        //  Client client = clientDao.getById(userId);
-                        //  score.setClient(client);
-                        //  client.getScoreList().add(score);
-                        // clientDao.updateClient(client);
                         clientDao.addScoreToClient(score, clientDao.getById(userId));
                         break;
                     default:

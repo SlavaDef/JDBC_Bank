@@ -16,7 +16,7 @@ import static com.progItHomework.utils.Util.getRandomDouble;
 public class App {
     public static void main(String[] args) {
 
-   /*    ClientDao clientDao = new ClientDaoImpl();
+    /*   ClientDao clientDao = new ClientDaoImpl();
         ScoreDao scoreDao = new ScoreDaoImp();
 
         clientDao.createSomeClients(5);
@@ -30,8 +30,13 @@ public class App {
         clientDao.addScoreToClient(score,clientDao.getById(1L));
         clientDao.addScoreToClient(score2,clientDao.getById(1L));
 
-       System.out.println(clientDao.getById(1L).getScoreList()); // first client has 3 score
-        System.out.println(scoreDao.allYourMoneyInUan(scoreDao.getById(1L).getClient().getScoreList())); */
+     //  System.out.println(clientDao.getById(1L).getScoreList()); // first client has 2 score
+
+        System.out.println(clientDao.getClientByPassport("HH:002220"));
+        System.out.println(clientDao.getClientByPassport("HH:002220").getId()); */
+
+
+
         //  for (Client client : clientDao.getAllClients()) {
        //   System.out.println(client);
        //    }

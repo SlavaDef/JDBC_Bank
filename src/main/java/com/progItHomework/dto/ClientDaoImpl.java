@@ -48,11 +48,12 @@ public class ClientDaoImpl implements ClientDao {
         }
     }
 
+
     @Override
     public void createSomeClients(int count) {
         for (int i = 0; i < count; i++) {
             addClient(new Client(getRandomFullName(), getRandomPhone(), getRandomAddress(),
-                    getRandomEmails(), getRandomPassport() + i));
+                    getRandomEmails(), "HH:00222" + i));
         }
     }
 
@@ -62,5 +63,19 @@ public class ClientDaoImpl implements ClientDao {
         score.setClient(client);
         client.getScoreList().add(score);
         updateClient(client);
+    }
+
+    public Client getClientByPassport(String passport) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            Transaction transaction = session.beginTransaction();
+
+            Query<Client> query =
+                    session.createNamedQuery("Client_By_Passport", Client.class)
+                            .setParameter("passport", passport);
+            List<Client> resultLIst = query.list();
+            transaction.commit();
+            return resultLIst.get(0);
+        }
+
     }
 }

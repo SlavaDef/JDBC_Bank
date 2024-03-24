@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 9">
+    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 10">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ClientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ClientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ClientDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ClientDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/ExchangeRates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/ExchangeRates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/entity/Score.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/T_Z" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/T_Z" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,7 @@
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Application.Aplication.executor": "Run",
-    "Application.App.executor": "Debug",
+    "Application.App.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.ScoreDaoImp.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -147,7 +149,7 @@
       <workItem from="1710688713248" duration="7550000" />
       <workItem from="1711136956906" duration="5416000" />
       <workItem from="1711208800204" duration="21436000" />
-      <workItem from="1711279345750" duration="5943000" />
+      <workItem from="1711279345750" duration="10971000" />
     </task>
     <task id="LOCAL-00001" summary="comit 5">
       <option name="closed" value="true" />
@@ -189,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711281391669</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="comit 10">
+      <option name="closed" value="true" />
+      <created>1711285580589</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711285580589</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,18 +215,8 @@
     <MESSAGE value="comit 7" />
     <MESSAGE value="comit 8" />
     <MESSAGE value="comit 9" />
-    <option name="LAST_COMMIT_MESSAGE" value="comit 9" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java</url>
-          <line>136</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="comit 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="comit 10" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

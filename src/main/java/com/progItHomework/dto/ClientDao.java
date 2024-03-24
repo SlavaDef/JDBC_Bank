@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface ClientDao {
 
-
     Client addClient(Client client);
 
     List<Client> getAllClients();
@@ -20,6 +19,8 @@ public interface ClientDao {
     void createSomeClients(int count);
 
 
-   void addScoreToClient(Score score, Client client);
+    void addScoreToClient(Score score, Client client);
+
+    Client getClientByPassport(String passport);
 
 }

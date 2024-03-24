@@ -15,11 +15,13 @@ public interface ScoreDao {
 
     Score updateScore(Score score);
 
-    Score updateScoreInUsd(Score score, Double usd);
-    Score updateScoreInEuro(Score score, Double eur);
-    Score updateScoreInUan(Score score, Double uan);
+    void updateScoreInUsd(Score score, Double usd);
 
-    //Score allYourManyInUan(Score score);
+    void updateScoreInEuro(Score score, Double eur);
+
+    void updateScoreInUan(Score score, Double uan);
 
     double allYourMoneyInUan(List<Score> scorelist);
+
+    Score getByClientPassport(String passport);
 }

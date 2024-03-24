@@ -33,12 +33,6 @@ public class Util {
         return list.get(ThreadLocalRandom.current().nextInt(9));
     }
 
-    public static String getRandomPassport() {
-        List<String> list = Arrays.asList("HH:7774433", "HH:8744423", "HH:9734567", "HH:0778435",
-                "HH:8891212", "HH:1774438", "HH:2774436", "HH:0074431", "HH:6774499");
-        return list.get(ThreadLocalRandom.current().nextInt(9));
-    }
-
     public static Double getRandomDouble() {
         List<Double> list = Arrays.asList(88.23, 123.14, 333.99, 213.44, 678.50);
         return list.get(ThreadLocalRandom.current().nextInt(5));

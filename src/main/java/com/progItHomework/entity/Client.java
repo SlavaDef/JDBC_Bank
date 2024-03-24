@@ -5,6 +5,9 @@ import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
+@NamedQueries({
+@NamedQuery(name = "Client_By_Passport",
+        query = "from Client where passport = :passport")})
 
 
 @NoArgsConstructor
@@ -45,12 +48,4 @@ public class Client {
         this.passport = passport;
     }
 
-    public Client(String clientFullName, String phone, String address, String email, String passport, List<Score> scoreList) {
-        this.clientFullName = clientFullName;
-        this.phone = phone;
-        this.address = address;
-        this.email = email;
-        this.passport = passport;
-        this.scoreList = scoreList;
-    }
 }

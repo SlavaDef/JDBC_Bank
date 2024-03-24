@@ -29,12 +29,6 @@ public class Score { // рахунки
     @Embedded
     private ExchangeRates exchangeRates;
 
-    public Score(Double usd, Double eur, Double uan) {
-        this.usd = usd;
-        this.eur = eur;
-        this.uan = uan;
-    }
-
     public Score(Double usd, Double eur, Double uan, ExchangeRates exchangeRates) {
         this.usd = usd;
         this.eur = eur;

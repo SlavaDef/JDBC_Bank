@@ -25,17 +25,7 @@ public class App {
       //  for (Client client : clientDao.getAllClients()) {
           //  System.out.println(client);
      //   }
-    //    System.out.println(clientDao.getById(1L));
-    //    Score score = new Score(0.01,0.01,0.01,
-      //          new ExchangeRates(37.00, 38.5, 40.2, 41.00));
-       // scoreDao.addScore(score);
-     //   clientDao.addScoreToClient(score,clientDao.getById(1L));
-       // Client client = clientDao.getById(1L);
-      //  score.setClient(client);
-      //  client.getScoreList().add(score);
-      //  clientDao.updateClient(client);
 
-      //  System.out.println(clientDao.getById(1L));
 
           runApplication();
 

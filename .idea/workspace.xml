@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 6">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/Application.java" afterDir="false" />
+    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 7">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/47284880-3cef-4c2e-b839-453c16699714.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/47284880-3cef-4c2e-b839-453c16699714.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,34 +38,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "Application.Aplication.executor": "Run",
-    "Application.App.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.ScoreDaoImp.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Admin/Desktop/JDBS_Bank",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Application.Aplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ScoreDaoImp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/JDBS_Bank&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\JDBS_Bank\src\main\resources" />
@@ -113,7 +114,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.Aplication" />
         <item itemvalue="Application.ScoreDaoImp" />
       </list>
     </recent_temporary>
@@ -144,7 +144,8 @@
       <workItem from="1710688596338" duration="41000" />
       <workItem from="1710688713248" duration="7550000" />
       <workItem from="1711136956906" duration="5416000" />
-      <workItem from="1711208800204" duration="20813000" />
+      <workItem from="1711208800204" duration="21436000" />
+      <workItem from="1711279345750" duration="1485000" />
     </task>
     <task id="LOCAL-00001" summary="comit 5">
       <option name="closed" value="true" />
@@ -162,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711226473393</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="comit 7">
+      <option name="closed" value="true" />
+      <created>1711232998677</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711232998677</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +184,8 @@
     </ignored-roots>
     <MESSAGE value="comit 5" />
     <MESSAGE value="comit 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="comit 6" />
+    <MESSAGE value="comit 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="comit 7" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

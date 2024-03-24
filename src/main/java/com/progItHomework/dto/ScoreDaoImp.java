@@ -8,6 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import static com.progItHomework.Util.*;
+import static org.hibernate.resource.transaction.spi.TransactionStatus.ACTIVE;
+import static org.hibernate.resource.transaction.spi.TransactionStatus.MARKED_ROLLBACK;
 
 public class ScoreDaoImp implements ScoreDao {
 
@@ -48,56 +50,75 @@ public class ScoreDaoImp implements ScoreDao {
 
     @Override
     public Score updateScoreInUsd(Score score, Double usd) {
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Transaction tx1 = session.beginTransaction();
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
             Double money = score.getUsd();
             score.setUsd(money + usd);
             session.merge(score);
-            tx1.commit();
-            return score;
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
         }
+        return score;
     }
 
     @Override
     public Score updateScoreInEuro(Score score, Double eur) {
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Transaction tx1 = session.beginTransaction();
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
             Double myMoney = score.getEur();
             score.setEur(myMoney + eur);
             session.merge(score);
-            tx1.commit();
-            return score;
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
         }
+        return score;
     }
 
     @Override
     public Score updateScoreInUan(Score score, Double uan) {
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Transaction tx1 = session.beginTransaction();
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
             Double myMoney = score.getUan();
             score.setUan(myMoney + uan);
             session.merge(score);
-            tx1.commit();
-            return score;
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
         }
+        return score;
+
     }
 
     @Override
     public Score allYourManyInUan(Score score) {
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Transaction tx1 = session.beginTransaction();
-            // score.getExchangeRates().setBuy_USD(37.00);
-            //  score.getExchangeRates().setSail_USD(38.00);
-            //  score.getExchangeRates().setBuy_EUR(40.00);
-            //  score.getExchangeRates().setSail_EUR(41.00);
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
             double usdUan = score.getExchangeRates().getBuy_USD();
             double eurUan = score.getExchangeRates().getBuy_EUR();
             score.getExchangeRates().setResult((score.getUsd() * usdUan) + (score.getEur() * eurUan) + score.getUan());
             session.merge(score);
-            tx1.commit();
-            return score;
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
         }
+        return score;
     }
-
-
 }

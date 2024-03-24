@@ -60,7 +60,7 @@ public class ScoreDaoImp implements ScoreDao {
     }
 
     @Override
-    public void updateScoreInUsd(Score score, Double usd) {
+    public void updateScoreInUsdPlus(Score score, Double usd) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         try (session) {
@@ -134,21 +134,15 @@ public class ScoreDaoImp implements ScoreDao {
     }
 
     @Override
-    public void updateAnotherScoreInUsd(Score score, Score another, Double usd) {
+    public void updateScoreInUsdMinus(Score score, Double usd) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         try (session) {
-          // List<Score> scoreList =  score.getClient().getScoreList();
-          //  double first = scoreList.get(0).getUsd();
-          //  double second = scoreList.get(1).getUsd();
-         //   score.setUsd(first-usd);
-         //   enother.setUsd(second+usd);
-           // score.setClient(score.getClient());
-            score.setUsd(score.getUsd() - usd);
-            another.setUsd(another.getUsd() + usd);
+            Double money = score.getUsd();
+            score.setUsd(money - usd);
             session.merge(score);
             transaction.commit();
-           // session.flush();
+            session.flush();
         } catch (Exception e) {
             if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
                 transaction.rollback();

@@ -15,7 +15,7 @@ public interface ScoreDao {
 
     Score updateScore(Score score);
 
-    void updateScoreInUsd(Score score, Double usd);
+    void updateScoreInUsdPlus(Score score, Double usd);
 
     void updateScoreInEuro(Score score, Double eur);
 
@@ -25,5 +25,5 @@ public interface ScoreDao {
 
     Score getByClientPassport(String passport);
 
-    void updateAnotherScoreInUsd(Score score, Score enother, Double usd);
+    void updateScoreInUsdMinus(Score score, Double usd);
 }

@@ -16,7 +16,7 @@ public class Application {
     public static void runApplication() {
 
         Long userId = 1L;
-        String passport ="";
+        String passport = "";
         try (Scanner sc = new Scanner(System.in)) {
 
             ClientDao clientDao = new ClientDaoImpl();
@@ -29,9 +29,9 @@ public class Application {
             while (true) {
                 System.out.println("1: Get score info");
                 System.out.println("2: Get count in UAN");
-                System.out.println("3: Refill score in USD?");
-                System.out.println("4: Refill score in EUR?");
-                System.out.println("5: Refill score in UAN?");
+                System.out.println("3: Refill/money transfer score in USD?");
+                System.out.println("4: Refill/money transfer score in EUR?");
+                System.out.println("5: Refill/money transfer score in UAN?");
                 System.out.println("6: Create/Add score");
                 System.out.print("-> ");
 
@@ -39,13 +39,14 @@ public class Application {
                 switch (s) {
                     case "1":
                         System.out.print("Enter your passport ");
-                         passport = sc.nextLine();
+                        passport = sc.nextLine();
                         userId = clientDao.getClientByPassport(passport).getId();
                         System.out.println(clientDao.getClientByPassport(passport).getScoreList());
                         break;
                     case "2":
                         System.out.println("Your count is " +
-                                scoreDao.allYourMoneyInUan(scoreDao.getById(userId).getClient().getScoreList()) + "_uans");
+                                scoreDao.allYourMoneyInUan(
+                                        scoreDao.getById(userId).getClient().getScoreList()) + "_uans");
                         break;
                     case "3":
                         System.out.print("1 - refill, 2 - transit ");
@@ -55,19 +56,15 @@ public class Application {
                             System.out.print("Enter how many dollars you want to deposit? ");
                             String usd = sc.nextLine();
                             double usD = Double.parseDouble(usd);
-                            scoreDao.updateScoreInUsd(scoreDao.getById(userId), usD);
+                            scoreDao.updateScoreInUsdPlus(scoreDao.getById(userId), usD);
                         }
                         if (ans == 2) {
-                           // System.out.print("Enter first count /  First = 0");
-                         //   String answer2 = sc.nextLine();
-                         //   Long ans2 = Long.parseLong(answer2);
-                         //   System.out.print("Enter second count / Second = 1");
-                         //   String answer3 = sc.nextLine();
-                         //   Long ans3 = Long.parseLong(answer3);
-                            System.out.print("How many ");
+                            System.out.print("How many? ");
                             String usd = sc.nextLine();
                             double usD = Double.parseDouble(usd);
-                            scoreDao.updateAnotherScoreInUsd(clientDao.getClientByPassport(passport).getScoreList().get(0),
+                            scoreDao.updateScoreInUsdMinus(
+                                    clientDao.getClientByPassport(passport).getScoreList().get(0), usD);
+                            scoreDao.updateScoreInUsdPlus(
                                     clientDao.getClientByPassport(passport).getScoreList().get(1), usD);
                         }
                         break;

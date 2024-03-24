@@ -1,13 +1,12 @@
 package com.progItHomework.dto;
 
-import com.progItHomework.entity.Client;
 import com.progItHomework.entity.ExchangeRates;
 import com.progItHomework.entity.Score;
 import com.progItHomework.storage.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import static com.progItHomework.Util.*;
+import static com.progItHomework.utils.Util.*;
 import static org.hibernate.resource.transaction.spi.TransactionStatus.ACTIVE;
 import static org.hibernate.resource.transaction.spi.TransactionStatus.MARKED_ROLLBACK;
 

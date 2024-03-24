@@ -9,7 +9,7 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-import static com.progItHomework.Util.*;
+import static com.progItHomework.utils.Util.*;
 
 public class ClientDaoImpl implements ClientDao {
 

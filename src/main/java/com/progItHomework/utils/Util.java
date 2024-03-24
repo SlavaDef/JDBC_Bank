@@ -1,4 +1,4 @@
-package com.progItHomework;
+package com.progItHomework.utils;
 
 import com.progItHomework.dto.ClientDao;
 import com.progItHomework.dto.ScoreDao;

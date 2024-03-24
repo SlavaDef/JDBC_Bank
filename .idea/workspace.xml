@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 7">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/47284880-3cef-4c2e-b839-453c16699714.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/47284880-3cef-4c2e-b839-453c16699714.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDaoImp.java" afterDir="false" />
-    </list>
+    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,7 +139,7 @@
       <workItem from="1710688713248" duration="7550000" />
       <workItem from="1711136956906" duration="5416000" />
       <workItem from="1711208800204" duration="21436000" />
-      <workItem from="1711279345750" duration="1485000" />
+      <workItem from="1711279345750" duration="1899000" />
     </task>
     <task id="LOCAL-00001" summary="comit 5">
       <option name="closed" value="true" />
@@ -171,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711232998677</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="comit 8">
+      <option name="closed" value="true" />
+      <created>1711281235384</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711281235384</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +187,8 @@
     <MESSAGE value="comit 5" />
     <MESSAGE value="comit 6" />
     <MESSAGE value="comit 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="comit 7" />
+    <MESSAGE value="comit 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="comit 8" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

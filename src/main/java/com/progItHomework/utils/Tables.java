@@ -1,4 +1,4 @@
-package com.progItHomework;
+package com.progItHomework.utils;
 
 public class Tables {
 

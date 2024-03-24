@@ -49,7 +49,7 @@ public class Application {
                                         scoreDao.getById(userId).getClient().getScoreList()) + "_uans");
                         break;
                     case "3":
-                        System.out.print("1 - refill, 2 - transit ");
+                        System.out.print("1 = Refill, 2 = Transit ");
                         String answer = sc.nextLine();
                         int ans = Integer.parseInt(answer);
                         if (ans == 1) {
@@ -59,26 +59,74 @@ public class Application {
                             scoreDao.updateScoreInUsdPlus(scoreDao.getById(userId), usD);
                         }
                         if (ans == 2) {  // TO-DO
+                            System.out.println("Account number from which to withdraw funds? Numbers begins from 0 ");
+                            String answer1 = sc.nextLine();
+                            int ans1 = Integer.parseInt(answer1);
+                            System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
+                            String answer2 = sc.nextLine();
+                            int ans2 = Integer.parseInt(answer2);
                             System.out.print("How many? ");
                             String usd = sc.nextLine();
                             double usD = Double.parseDouble(usd);
-                            scoreDao.updateScoreInUsdMinus(
-                                    clientDao.getClientByPassport(passport).getScoreList().get(0), usD);
-                            scoreDao.updateScoreInUsdPlus(
-                                    clientDao.getClientByPassport(passport).getScoreList().get(1), usD);
+                            scoreDao.tranzitScoresInUSD(clientDao.getClientByPassport(passport).getScoreList().get(ans1),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans2), usD);
                         }
                         break;
                     case "4":
-                        System.out.print("Enter how many euros you want to deposit ");
-                        String eur = sc.nextLine();
-                        double euR = Double.parseDouble(eur);
-                        scoreDao.updateScoreInEuro(scoreDao.getById(userId), euR);
+                        System.out.print("1 = Refill, 2 = Transit ");
+                        String answer2 = sc.nextLine();
+                        int answ = Integer.parseInt(answer2);
+                        if (answ == 1) {
+                            System.out.print("Enter how many euros you want to deposit? ");
+                            String eur = sc.nextLine();
+                            double euR = Double.parseDouble(eur);
+                            scoreDao.updateScoreInEURPlus(scoreDao.getById(userId), euR);
+                        }
+                        if (answ == 2) {  // TO-DO
+                            System.out.println("Account number from which to withdraw funds? Numbers begins from 0 ");
+                            String answer1 = sc.nextLine();
+                            int ans1 = Integer.parseInt(answer1);
+                            System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
+                            String answer3 = sc.nextLine();
+                            int ans2 = Integer.parseInt(answer3);
+                            System.out.print("How many? ");
+                            String eur = sc.nextLine();
+                            double euro = Double.parseDouble(eur);
+                            scoreDao.tranzitScoresInEUR(clientDao.getClientByPassport(passport).getScoreList().get(ans1),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans2), euro);
+                        }
+                       // System.out.print("Enter how many euros you want to deposit ");
+                      //  String eur = sc.nextLine();
+                      //  double euR = Double.parseDouble(eur);
+                     //   scoreDao.updateScoreInEuro(scoreDao.getById(userId), euR);
                         break;
                     case "5":
-                        System.out.print("Enter how many uans you want to deposit ");
-                        String uan = sc.nextLine();
-                        double uaN = Double.parseDouble(uan);
-                        scoreDao.updateScoreInUan(scoreDao.getById(userId), uaN);
+                        System.out.print("1 = Refill, 2 = Transit ");
+                        String answer3 = sc.nextLine();
+                        int answ2 = Integer.parseInt(answer3);
+                        if (answ2 == 1) {
+                            System.out.print("Enter how many uans you want to deposit? ");
+                            String uan = sc.nextLine();
+                            double uaN = Double.parseDouble(uan);
+                            scoreDao.updateScoreInUANPlus(scoreDao.getById(userId), uaN);
+                        }
+                        if (answ2 == 2) {  // TO-DO
+                            System.out.println("Account number from which to withdraw funds? Numbers begins from 0 ");
+                            String answer1 = sc.nextLine();
+                            int ans1 = Integer.parseInt(answer1);
+                            System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
+                            String answer4 = sc.nextLine();
+                            int ans2 = Integer.parseInt(answer4);
+                            System.out.print("How many? ");
+                            String eur = sc.nextLine();
+                            double uan = Double.parseDouble(eur);
+                            scoreDao.tranzitScoresInUAN(clientDao.getClientByPassport(passport).getScoreList().get(ans1),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans2), uan);
+                            //  System.out.print("Enter how many uans you want to deposit ");
+                            //   String uan = sc.nextLine();
+                            //   double uaN = Double.parseDouble(uan);
+                            //   scoreDao.updateScoreInUan(scoreDao.getById(userId), uaN);
+                        }
                         break;
                     case "6":
                         Score score = new Score(0.01, 0.01, 0.01,

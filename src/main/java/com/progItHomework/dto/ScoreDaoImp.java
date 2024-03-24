@@ -49,22 +49,7 @@ public class ScoreDaoImp implements ScoreDao {
         }
     }
 
-    @Override
-    public void updateScoreInUsdPlus(Score score, Double usd) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        try (session) {
-            Double money = score.getUsd();
-            score.setUsd(money + usd);
-            session.merge(score);
-            transaction.commit();
-            session.flush();
-        } catch (Exception e) {
-            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
-                transaction.rollback();
-            }
-        }
-    }
+
 
     @Override
     public void updateScoreInEuro(Score score, Double eur) {
@@ -124,6 +109,23 @@ public class ScoreDaoImp implements ScoreDao {
     }
 
     @Override
+    public void updateScoreInUsdPlus(Score score, Double usd) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            Double money = score.getUsd();
+            score.setUsd(money + usd);
+            session.merge(score);
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
+    }
+
+    @Override
     public void updateScoreInUsdMinus(Score score, Double usd) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
@@ -131,6 +133,122 @@ public class ScoreDaoImp implements ScoreDao {
             Double money = score.getUsd();
             score.setUsd(money - usd);
             session.merge(score);
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
+    }
+
+    @Override
+    public void tranzitScoresInUSD(Score first, Score second, Double usd) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            updateScoreInUsdMinus(first,usd);
+            updateScoreInUsdPlus(second,usd);
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
+    }
+
+    @Override
+    public void updateScoreInEURPlus(Score score, Double eur) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            Double money = score.getEur();
+            score.setUsd(money + eur);
+            session.merge(score);
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
+    }
+
+    @Override
+    public void updateScoreInEURMinus(Score score, Double eur) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            Double money = score.getEur();
+            score.setUsd(money - eur);
+            session.merge(score);
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
+    }
+
+    @Override
+    public void tranzitScoresInEUR(Score first, Score second, Double eur) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            updateScoreInEURMinus(first,eur);
+            updateScoreInEURPlus(second,eur);
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
+    }
+
+    @Override
+    public void updateScoreInUANPlus(Score score, Double uan) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            Double money = score.getUan();
+            score.setUsd(money + uan);
+            session.merge(score);
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
+    }
+
+    @Override
+    public void updateScoreInUANMinus(Score score, Double uan) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            Double money = score.getUan();
+            score.setUsd(money - uan);
+            session.merge(score);
+            transaction.commit();
+            session.flush();
+        } catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
+    }
+
+    @Override
+    public void tranzitScoresInUAN(Score first, Score second, Double uan) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            updateScoreInUANMinus(first,uan);
+            updateScoreInUANPlus(second,uan);
             transaction.commit();
             session.flush();
         } catch (Exception e) {

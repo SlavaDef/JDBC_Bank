@@ -55,7 +55,6 @@ public class ClientDaoImpTest {
 
     @Test
     void ifClientIsUpdated() {
-
         clientDao.addClient(client);
         client.setClientFullName("new Name");
         clientDao.updateClient(client);
@@ -66,17 +65,17 @@ public class ClientDaoImpTest {
 
     @Test
     void ifAddScoreToClientWorks() {
-         scoreDao.addScore(score);
-         clientDao.addClient(client);
+        scoreDao.addScore(score);
+        clientDao.addClient(client);
         clientDao.addScoreToClient(scoreDao.getById(score.getId()), clientDao.getById(client.getId()));
         Score scoreList = clientDao.getById(client.getId()).getScoreList().get(0);
         assertEquals(score.getId(), scoreList.getId());
     }
 
     @Test
-    void ifClientReturnsByPassport(){
+    void ifClientReturnsByPassport() {
         clientDao.addClient(client);
         Client client1 = clientDao.getClientByPassport("HH220022");
-        assertEquals(client.getPhone(),client1.getPhone());
+        assertEquals(client.getPhone(), client1.getPhone());
     }
 }

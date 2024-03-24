@@ -24,4 +24,22 @@ public interface ScoreDao {
     double allClientMoneyInUan(List<Score> scorelist);
 
     void updateScoreInUsdMinus(Score score, Double usd);
+
+    void tranzitScoresInUSD(Score first, Score second, Double usd);
+
+    void updateScoreInEURPlus(Score score, Double eur);
+
+    void updateScoreInEURMinus(Score score, Double eur);
+
+    void tranzitScoresInEUR(Score first, Score second, Double eur);
+
+    void updateScoreInUANPlus(Score score, Double uan);
+
+    void updateScoreInUANMinus(Score score, Double uan);
+
+    void tranzitScoresInUAN(Score first, Score second, Double uan);
+
+
+
+
 }

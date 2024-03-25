@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 17">
+    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 18">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4b59bceb-4567-4806-8207-eee404f73910.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4b59bceb-4567-4806-8207-eee404f73910.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao/ScoreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao/ScoreDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao/ScoreDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao/ScoreDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/utils/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/utils/Util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +171,8 @@
       <workItem from="1711136956906" duration="5416000" />
       <workItem from="1711208800204" duration="21436000" />
       <workItem from="1711279345750" duration="28122000" />
-      <workItem from="1711376683971" duration="1187000" />
+      <workItem from="1711376683971" duration="2252000" />
+      <workItem from="1711395960163" duration="3053000" />
     </task>
     <task id="LOCAL-00001" summary="comit 5">
       <option name="closed" value="true" />
@@ -273,11 +278,42 @@
       <option name="project" value="LOCAL" />
       <updated>1711377144407</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="comit 18">
+      <option name="closed" value="true" />
+      <created>1711386188743</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711386188743</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -297,7 +333,8 @@
     <MESSAGE value="comit 15" />
     <MESSAGE value="comit 16" />
     <MESSAGE value="comit 17" />
-    <option name="LAST_COMMIT_MESSAGE" value="comit 17" />
+    <MESSAGE value="comit 18" />
+    <option name="LAST_COMMIT_MESSAGE" value="comit 18" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

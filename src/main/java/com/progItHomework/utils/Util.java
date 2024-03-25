@@ -34,7 +34,7 @@ public class Util {
     }
 
     public static Double getRandomDouble() {
-        List<Double> list = Arrays.asList(88.23, 123.14, 333.99, 213.44, 678.50);
+        List<Double> list = Arrays.asList(1188.23, 1123.14, 1333.99, 1213.44, 2678.50);
         return list.get(ThreadLocalRandom.current().nextInt(5));
     }
 

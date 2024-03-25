@@ -127,6 +127,92 @@ public class Application {
                         clientDao.addScoreToClient(score, clientDao.getById(userId));
                         break;
                     case "7":
+                        System.out.println("1: Convert from uan to usd ");
+                        System.out.println("2: Convert from uan to eur ");
+                        System.out.println("3: Convert from usd to uan ");
+                        System.out.println("4: Convert from usd to eur ");
+                        System.out.println("5: Convert from eur to uan ");
+                        System.out.println("6: Convert from eur to usd ");
+                        String answer5 = sc.nextLine();
+                        int answ5 = Integer.parseInt(answer5);
+                        if (answ5 == 1) {  // TO-DO
+                            System.out.println("Account number from which to withdraw funds? Numbers begins from 0 ");
+                            String answer1 = sc.nextLine();
+                            int ans5 = Integer.parseInt(answer1);
+                            System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
+                            String answer4 = sc.nextLine();
+                            int ans6 = Integer.parseInt(answer4);
+                            System.out.print("How many? ");
+                            String uan2 = sc.nextLine();
+                            double uaN2 = Double.parseDouble(uan2);
+                            scoreDao.convertClientMoneyFromUanToUsd(clientDao.getClientByPassport(passport).getScoreList().get(ans5),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans6), uaN2);
+                        }
+                        if (answ5 == 2) {  // TO-DO
+                            System.out.println("Account number from which to withdraw funds? Numbers begins from 0 ");
+                            String answer1 = sc.nextLine();
+                            int ans5 = Integer.parseInt(answer1);
+                            System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
+                            String answer4 = sc.nextLine();
+                            int ans6 = Integer.parseInt(answer4);
+                            System.out.print("How many? ");
+                            String uan2 = sc.nextLine();
+                            double uaN2 = Double.parseDouble(uan2);
+                            scoreDao.convertClientMoneyFromUanToEur(clientDao.getClientByPassport(passport).getScoreList().get(ans5),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans6), uaN2);
+                        }
+                        if (answ5 == 3) {  // TO-DO
+                            System.out.println("Account number from which to withdraw funds? Numbers begins from 0 ");
+                            String answer1 = sc.nextLine();
+                            int ans5 = Integer.parseInt(answer1);
+                            System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
+                            String answer4 = sc.nextLine();
+                            int ans6 = Integer.parseInt(answer4);
+                            System.out.print("How many? ");
+                            String usd2 = sc.nextLine();
+                            double usD2 = Double.parseDouble(usd2);
+                            scoreDao.convertClientMoneyFromUsdToUan(clientDao.getClientByPassport(passport).getScoreList().get(ans5),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans6), usD2);
+                        }
+                        if (answ5 == 4) {  // TO-DO
+                            System.out.println("Account number from which to withdraw funds? Numbers begins from 0 ");
+                            String answer1 = sc.nextLine();
+                            int ans5 = Integer.parseInt(answer1);
+                            System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
+                            String answer4 = sc.nextLine();
+                            int ans6 = Integer.parseInt(answer4);
+                            System.out.print("How many? ");
+                            String usd2 = sc.nextLine();
+                            double usD2 = Double.parseDouble(usd2);
+                            scoreDao.convertClientMoneyFromUsdToEur(clientDao.getClientByPassport(passport).getScoreList().get(ans5),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans6), usD2);
+                        }
+                        if (answ5 == 5) {  // TO-DO
+                            System.out.println("Account number from which to withdraw funds? Numbers begins from 0 ");
+                            String answer1 = sc.nextLine();
+                            int ans5 = Integer.parseInt(answer1);
+                            System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
+                            String answer4 = sc.nextLine();
+                            int ans6 = Integer.parseInt(answer4);
+                            System.out.print("How many? ");
+                            String eur2 = sc.nextLine();
+                            double euR2 = Double.parseDouble(eur2);
+                            scoreDao.convertClientMoneyFromEurToUan(clientDao.getClientByPassport(passport).getScoreList().get(ans5),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans6), euR2);
+                        }
+                        if (answ5 == 6) {  // TO-DO
+                            System.out.println("Account number from which to withdraw funds? Numbers begins from 0 ");
+                            String answer1 = sc.nextLine();
+                            int ans5 = Integer.parseInt(answer1);
+                            System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
+                            String answer4 = sc.nextLine();
+                            int ans6 = Integer.parseInt(answer4);
+                            System.out.print("How many? ");
+                            String eur2 = sc.nextLine();
+                            double euR2 = Double.parseDouble(eur2);
+                            scoreDao.convertClientMoneyFromEurToUsd(clientDao.getClientByPassport(passport).getScoreList().get(ans5),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans6), euR2);
+                        }
 
                         break;
 

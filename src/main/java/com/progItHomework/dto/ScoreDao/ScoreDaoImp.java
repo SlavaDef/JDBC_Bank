@@ -260,33 +260,105 @@ public class ScoreDaoImp implements ScoreDao {
     }
 
     @Override
-    public void convertClientMoneyFromUanToUsd(Score score, Double uan) {
-
+    public void convertClientMoneyFromUanToUsd(Score first, Score second, Double uan) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+          double res = uan/first.getExchangeRates().getSail_USD();
+            updateScoreInUANMinus(first,uan);
+            updateScoreInUsdPlus(second,res);
+            transaction.commit();
+            session.flush();
+        }catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
     }
 
     @Override
-    public void convertClientMoneyFromUanToEur(Score score, Double uan) {
-
+    public void convertClientMoneyFromUanToEur(Score first, Score second, Double uan) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            double res = uan/first.getExchangeRates().getSail_EUR();
+            updateScoreInUANMinus(first,uan);
+            updateScoreInEURPlus(second,res);
+            transaction.commit();
+            session.flush();
+        }catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
     }
 
     @Override
-    public void convertClientMoneyFromUsdToUan(Score score, Double usd) {
-
+    public void convertClientMoneyFromUsdToUan(Score first, Score second, Double usd) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            double res = usd*first.getExchangeRates().getSail_USD();
+            updateScoreInUsdMinus(first,usd);
+            updateScoreInUANPlus(second,res);
+            transaction.commit();
+            session.flush();
+        }catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
     }
 
     @Override
-    public void convertClientMoneyFromUsdToEur(Score score, Double usd) {
-
+    public void convertClientMoneyFromUsdToEur(Score first, Score second,Double usd) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            double res = (usd*first.getExchangeRates().getSail_USD()) / first.getExchangeRates().getSail_EUR();
+            updateScoreInUsdMinus(first,usd);
+            updateScoreInEURPlus(second,res);
+            transaction.commit();
+            session.flush();
+        }catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
     }
 
     @Override
-    public void convertClientMoneyFromEurToUan(Score score, Double eur) {
-
+    public void convertClientMoneyFromEurToUan(Score first, Score second, Double eur) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            double res = eur*first.getExchangeRates().getSail_EUR();
+            updateScoreInEURMinus(first,eur);
+            updateScoreInUANPlus(second,res);
+            transaction.commit();
+            session.flush();
+        }catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
     }
 
     @Override
-    public void convertClientMoneyFromEurToUsd(Score score, Double eur) {
-
+    public void convertClientMoneyFromEurToUsd(Score first, Score second, Double eur) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try (session) {
+            double res = (eur*first.getExchangeRates().getSail_EUR()) / first.getExchangeRates().getSail_USD();
+            updateScoreInEURMinus(first,eur);
+            updateScoreInUsdPlus(second,res);
+            transaction.commit();
+            session.flush();
+        }catch (Exception e) {
+            if (transaction.getStatus() == ACTIVE || transaction.getStatus() == MARKED_ROLLBACK) {
+                transaction.rollback();
+            }
+        }
     }
 
 

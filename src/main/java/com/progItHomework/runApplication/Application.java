@@ -1,9 +1,9 @@
 package com.progItHomework.runApplication;
 
-import com.progItHomework.dto.ClientDao;
-import com.progItHomework.dto.ClientDaoImpl;
-import com.progItHomework.dto.ScoreDao;
-import com.progItHomework.dto.ScoreDaoImp;
+import com.progItHomework.dto.clientDao.ClientDao;
+import com.progItHomework.dto.clientDao.ClientDaoImpl;
+import com.progItHomework.dto.ScoreDao.ScoreDao;
+import com.progItHomework.dto.ScoreDao.ScoreDaoImp;
 import com.progItHomework.entity.ExchangeRates;
 import com.progItHomework.entity.Score;
 
@@ -66,10 +66,10 @@ public class Application {
                             String answer2 = sc.nextLine();
                             int ans2 = Integer.parseInt(answer2);
                             System.out.print("How many? ");
-                            String usd = sc.nextLine();
-                            double usD = Double.parseDouble(usd);
+                            String usd2 = sc.nextLine();
+                            double usD2 = Double.parseDouble(usd2);
                             scoreDao.tranzitScoresInUSD(clientDao.getClientByPassport(passport).getScoreList().get(ans1),
-                                    clientDao.getClientByPassport(passport).getScoreList().get(ans2), usD);
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans2), usD2);
                         }
                         break;
                     case "4":
@@ -84,21 +84,17 @@ public class Application {
                         }
                         if (answ == 2) {  // TO-DO
                             System.out.println("Account number from which to withdraw funds? Numbers begins from 0 ");
-                            String answer1 = sc.nextLine();
-                            int ans1 = Integer.parseInt(answer1);
-                            System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
                             String answer3 = sc.nextLine();
-                            int ans2 = Integer.parseInt(answer3);
+                            int ans3 = Integer.parseInt(answer3);
+                            System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
+                            String answer4 = sc.nextLine();
+                            int ans4 = Integer.parseInt(answer4);
                             System.out.print("How many? ");
-                            String eur = sc.nextLine();
-                            double euro = Double.parseDouble(eur);
-                            scoreDao.tranzitScoresInEUR(clientDao.getClientByPassport(passport).getScoreList().get(ans1),
-                                    clientDao.getClientByPassport(passport).getScoreList().get(ans2), euro);
+                            String eur2 = sc.nextLine();
+                            double euro2 = Double.parseDouble(eur2);
+                            scoreDao.tranzitScoresInEUR(clientDao.getClientByPassport(passport).getScoreList().get(ans3),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans4), euro2);
                         }
-                       // System.out.print("Enter how many euros you want to deposit ");
-                      //  String eur = sc.nextLine();
-                      //  double euR = Double.parseDouble(eur);
-                     //   scoreDao.updateScoreInEuro(scoreDao.getById(userId), euR);
                         break;
                     case "5":
                         System.out.print("1 = Refill, 2 = Transit ");
@@ -113,19 +109,15 @@ public class Application {
                         if (answ2 == 2) {  // TO-DO
                             System.out.println("Account number from which to withdraw funds? Numbers begins from 0 ");
                             String answer1 = sc.nextLine();
-                            int ans1 = Integer.parseInt(answer1);
+                            int ans5 = Integer.parseInt(answer1);
                             System.out.println("Account number which to withdraw funds? Numbers begins from 0 ");
                             String answer4 = sc.nextLine();
-                            int ans2 = Integer.parseInt(answer4);
+                            int ans6 = Integer.parseInt(answer4);
                             System.out.print("How many? ");
-                            String eur = sc.nextLine();
-                            double uan = Double.parseDouble(eur);
-                            scoreDao.tranzitScoresInUAN(clientDao.getClientByPassport(passport).getScoreList().get(ans1),
-                                    clientDao.getClientByPassport(passport).getScoreList().get(ans2), uan);
-                            //  System.out.print("Enter how many uans you want to deposit ");
-                            //   String uan = sc.nextLine();
-                            //   double uaN = Double.parseDouble(uan);
-                            //   scoreDao.updateScoreInUan(scoreDao.getById(userId), uaN);
+                            String uan2 = sc.nextLine();
+                            double uaN2 = Double.parseDouble(uan2);
+                            scoreDao.tranzitScoresInUAN(clientDao.getClientByPassport(passport).getScoreList().get(ans5),
+                                    clientDao.getClientByPassport(passport).getScoreList().get(ans6), uaN2);
                         }
                         break;
                     case "6":

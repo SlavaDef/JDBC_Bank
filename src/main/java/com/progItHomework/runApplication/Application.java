@@ -33,6 +33,7 @@ public class Application {
                 System.out.println("4: Refill/money transfer score in EUR?");
                 System.out.println("5: Refill/money transfer score in UAN?");
                 System.out.println("6: Create/Add score");
+                System.out.println("7: Convertation:");
                 System.out.print("-> ");
 
                 String s = sc.nextLine();
@@ -125,6 +126,10 @@ public class Application {
                                 new ExchangeRates(37.00, 38.5, 40.2, 41.00));
                         clientDao.addScoreToClient(score, clientDao.getById(userId));
                         break;
+                    case "7":
+
+                        break;
+
                     default:
                         return;
                 }

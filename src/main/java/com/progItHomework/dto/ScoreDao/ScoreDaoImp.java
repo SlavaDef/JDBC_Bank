@@ -258,4 +258,36 @@ public class ScoreDaoImp implements ScoreDao {
             }
         }
     }
+
+    @Override
+    public void convertClientMoneyFromUanToUsd(Score score, Double uan) {
+
+    }
+
+    @Override
+    public void convertClientMoneyFromUanToEur(Score score, Double uan) {
+
+    }
+
+    @Override
+    public void convertClientMoneyFromUsdToUan(Score score, Double usd) {
+
+    }
+
+    @Override
+    public void convertClientMoneyFromUsdToEur(Score score, Double usd) {
+
+    }
+
+    @Override
+    public void convertClientMoneyFromEurToUan(Score score, Double eur) {
+
+    }
+
+    @Override
+    public void convertClientMoneyFromEurToUsd(Score score, Double eur) {
+
+    }
+
+
 }

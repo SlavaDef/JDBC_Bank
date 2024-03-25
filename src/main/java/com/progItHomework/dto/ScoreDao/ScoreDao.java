@@ -39,6 +39,18 @@ public interface ScoreDao {
 
     void tranzitScoresInUAN(Score first, Score second, Double uan);
 
+    void convertClientMoneyFromUanToUsd(Score score, Double uan);
+
+    void convertClientMoneyFromUanToEur(Score score, Double uan);
+
+    void convertClientMoneyFromUsdToUan(Score score, Double usd);
+
+    void convertClientMoneyFromUsdToEur(Score score, Double usd);
+
+    void convertClientMoneyFromEurToUan(Score score, Double eur);
+
+    void convertClientMoneyFromEurToUsd(Score score, Double eur);
+
 
 
 

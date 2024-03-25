@@ -1,7 +1,7 @@
 package com.progItHomework.utils;
 
-import com.progItHomework.dto.ClientDao;
-import com.progItHomework.dto.ScoreDao;
+import com.progItHomework.dto.clientDao.ClientDao;
+import com.progItHomework.dto.ScoreDao.ScoreDao;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;

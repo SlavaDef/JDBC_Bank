@@ -1,5 +1,6 @@
-package com.progItHomework.dto;
+package com.progItHomework.dto.ScoreDao;
 
+import com.progItHomework.dto.ScoreDao.ScoreDao;
 import com.progItHomework.entity.ExchangeRates;
 import com.progItHomework.entity.Score;
 import com.progItHomework.storage.HibernateUtil;
@@ -164,7 +165,7 @@ public class ScoreDaoImp implements ScoreDao {
         Transaction transaction = session.beginTransaction();
         try (session) {
             Double money = score.getEur();
-            score.setUsd(money + eur);
+            score.setEur(money + eur);
             session.merge(score);
             transaction.commit();
             session.flush();
@@ -181,7 +182,7 @@ public class ScoreDaoImp implements ScoreDao {
         Transaction transaction = session.beginTransaction();
         try (session) {
             Double money = score.getEur();
-            score.setUsd(money - eur);
+            score.setEur(money - eur);
             session.merge(score);
             transaction.commit();
             session.flush();
@@ -214,7 +215,7 @@ public class ScoreDaoImp implements ScoreDao {
         Transaction transaction = session.beginTransaction();
         try (session) {
             Double money = score.getUan();
-            score.setUsd(money + uan);
+            score.setUan(money + uan);
             session.merge(score);
             transaction.commit();
             session.flush();
@@ -231,7 +232,7 @@ public class ScoreDaoImp implements ScoreDao {
         Transaction transaction = session.beginTransaction();
         try (session) {
             Double money = score.getUan();
-            score.setUsd(money - uan);
+            score.setUan(money - uan);
             session.merge(score);
             transaction.commit();
             session.flush();

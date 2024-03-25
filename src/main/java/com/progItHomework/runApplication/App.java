@@ -1,18 +1,6 @@
 package com.progItHomework.runApplication;
 
-import com.progItHomework.dto.ClientDao;
-import com.progItHomework.dto.ClientDaoImpl;
-import com.progItHomework.dto.ScoreDao;
-import com.progItHomework.dto.ScoreDaoImp;
-import com.progItHomework.entity.Client;
-import com.progItHomework.entity.ExchangeRates;
-import com.progItHomework.entity.Score;
-
-import java.util.List;
-
 import static com.progItHomework.runApplication.Application.runApplication;
-import static com.progItHomework.utils.Util.createClientsAndScores;
-import static com.progItHomework.utils.Util.getRandomDouble;
 
 
 public class App {

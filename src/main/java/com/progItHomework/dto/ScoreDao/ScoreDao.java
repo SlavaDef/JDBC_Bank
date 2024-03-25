@@ -1,4 +1,4 @@
-package com.progItHomework.dto;
+package com.progItHomework.dto.ScoreDao;
 
 import com.progItHomework.entity.Client;
 import com.progItHomework.entity.Score;

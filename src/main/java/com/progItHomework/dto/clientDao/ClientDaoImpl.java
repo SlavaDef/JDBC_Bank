@@ -1,5 +1,6 @@
-package com.progItHomework.dto;
+package com.progItHomework.dto.clientDao;
 
+import com.progItHomework.dto.clientDao.ClientDao;
 import com.progItHomework.entity.Client;
 import com.progItHomework.entity.Score;
 import com.progItHomework.storage.HibernateUtil;

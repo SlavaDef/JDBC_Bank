@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 18">
+    <list default="true" id="68b5f479-84e9-4188-89d3-60d9ec9a0e1b" name="Changes" comment="comit 19">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao/ScoreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao/ScoreDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao/ScoreDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/dto/ScoreDao/ScoreDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/runApplication/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/progItHomework/utils/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progItHomework/utils/Util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +23,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -172,7 +174,8 @@
       <workItem from="1711208800204" duration="21436000" />
       <workItem from="1711279345750" duration="28122000" />
       <workItem from="1711376683971" duration="2252000" />
-      <workItem from="1711395960163" duration="3053000" />
+      <workItem from="1711395960163" duration="3747000" />
+      <workItem from="1711399776497" duration="415000" />
     </task>
     <task id="LOCAL-00001" summary="comit 5">
       <option name="closed" value="true" />
@@ -286,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711386188743</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="comit 19">
+      <option name="closed" value="true" />
+      <created>1711399526198</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1711399526198</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +345,8 @@
     <MESSAGE value="comit 16" />
     <MESSAGE value="comit 17" />
     <MESSAGE value="comit 18" />
-    <option name="LAST_COMMIT_MESSAGE" value="comit 18" />
+    <MESSAGE value="comit 19" />
+    <option name="LAST_COMMIT_MESSAGE" value="comit 19" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
